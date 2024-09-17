@@ -1,0 +1,167 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowcafé</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f6e3cf;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .circle {
+            width: 250px;
+            height: 250px;
+            background-color: #d4a373;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+        }
+
+        #timer {
+            font-size: 36px;
+            color: #fff;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .buttons button {
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #d4a373;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .buttons button:hover {
+            background-color: #b2845a;
+        }
+
+        .break-options {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .break-option {
+            margin: 0 10px;
+        }
+
+        .break-option input[type="radio"] {
+            display: none;
+        }
+
+        .break-option label {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #d4a373;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .break-option label:hover {
+            background-color: #b2845a;
+        }
+
+        .break-option input[type="radio"]:checked + label {
+            background-color: #b2845a;
+        }
+
+        #guide-container .guide-content {
+            text-align: left;
+            background-color: #f6e3cf;
+            padding: 20px;
+            border-radius: 5px;
+            color: #5c4033;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        #guide-container h2, #guide-container p {
+            color: #5c4033;
+        }
+
+        #back {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #d4a373;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+
+        #back:hover {
+            background-color: #b2845a;
+        }
+    </style>
+</head>
+<body>
+    <div id="main-container" class="container">
+        <div class="circle">
+            <div id="timer">00:00</div>
+        </div>
+        <div class="buttons">
+            <button id="start">Start</button>
+            <button id="pause">Pause</button>
+            <button id="break">Take a Break</button>
+            <button id="end">End</button>
+            <button id="guide">Guide</button>
+        </div>
+        <div class="break-options">
+            <div class="break-option">
+                <input type="radio" id="ratio1" name="breakRatio" value="0.25">
+                <label for="ratio1">1/4</label>
+            </div>
+            <div class="break-option">
+                <input type="radio" id="ratio2" name="breakRatio" value="0.20" checked>
+                <label for="ratio2">1/5</label>
+            </div>
+            <div class="break-option">
+                <input type="radio" id="ratio3" name="breakRatio" value="0.1667">
+                <label for="ratio3">1/6</label>
+            </div>
+        </div>
+    </div>
+    <div id="guide-container" class="container" style="display: none;">
+        <div class="guide-content">
+            <h1>Flowmodoro Guide</h1>
+            <p>The Flowmodoro method is a study technique that combines focused work periods with short breaks to maximize productivity. Here's how to use the Flowcafé app to implement this method:</p>
+            <ol>
+                <li>Set a micro-goal you want to work on.</li>
+                <li>Select your desired break ratio (we recommend 1/5!) and press the "Start" button to begin the timer.</li>
+                <li>Achieve your micro-goal.</li>
+                <li>Press the "Take a Break" button to start your break. The break time will correspond to the break ratio you selected previously.</li>
+                <li>After the break, the app will automatically start a new work session.</li>
+                <li>Press the "End" button to reset the timer and end the session.</li>
+            </ol>
+            <button id="back">Back</button>
+        </div>
+    </div>
+
+    <audio id="ding">
+        <source src="ding.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

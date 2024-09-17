@@ -1,0 +1,78 @@
+body {
+    font-family: 'Arial', sans-serif; /* Soft font */
+    background-color: #f6e3cf; /* Coffee-shop themed color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.circle {
+    width: 250px;
+    height: 250px;
+    background-color: #d4a373; /* Coffee-shop themed color */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+#timer {
+    font-size: 36px;
+    color: #fff;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #d4a373; /* Coffee-shop themed color */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: #b2845a; /* Darker shade of coffee-shop themed color */
+}
+
+.guide-content {
+    margin: 50px auto;
+    max-width: 600px;
+    font-family: 'Arial', sans-serif; /* Apply the same font as the rest */
+    color: #6b4d33; /* Cafe brown color for text */
+    text-align: left; /* Align text to the left */
+}
+
+.guide-content h1 {
+    font-size: 36px;
+    color: #d4a373; /* Coffee-shop themed color */
+}
+
+.guide-content p, .guide-content ol {
+    font-size: 18px;
+}
+
+.guide-content button {
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #d4a373; /* Coffee-shop themed color */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.guide-content button:hover {
+    background-color: #b2845a; /* Darker shade of coffee-shop themed color */
+}
