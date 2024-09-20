@@ -3,7 +3,7 @@ let time = 0;
 let running = false;
 let breakTime = 0;
 let isBreak = false;
-let breakRatio = 1 / 5; // Default break time ratio
+let breakRatio = 1 / 5;
 
 const startButton = document.getElementById('start');
 const pauseButton = document.getElementById('pause');
@@ -22,7 +22,6 @@ endButton.addEventListener('click', endSession);
 guideButton.addEventListener('click', showGuide);
 backButton.addEventListener('click', showMain);
 
-// Add event listener for break ratio options
 breakOptions.forEach(option => {
     option.addEventListener('change', () => {
         breakRatio = parseFloat(option.value);
@@ -58,7 +57,7 @@ function updateTimer() {
             isBreak = false;
             time = 0;
             startTimer();
-            dingSound.play(); // Play ding sound
+            dingSound.play();
         }
     }
 }
@@ -66,9 +65,9 @@ function updateTimer() {
 function takeBreak() {
     if (!isBreak && time > 0) {
         pauseTimer();
-        breakTime = Math.floor(time * breakRatio); // Calculate break time based on selected ratio
+        breakTime = Math.floor(time * breakRatio);
         isBreak = true;
-        time = 0; // Reset study time for the next session
+        time = 0;
         timerDisplay.textContent = formatTime(breakTime);
         startTimer();
     }
@@ -98,3 +97,4 @@ function formatTime(seconds) {
     const remainingSeconds = seconds % 60;
     return `${String(minutes).padStart(2, '0')}:${String(remainingSeconds).padStart(2, '0')}`;
 }
+
