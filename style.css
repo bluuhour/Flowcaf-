@@ -1,6 +1,6 @@
 body {
-    font-family: 'Arial', sans-serif; /* Soft font */
-    background-color: #f6e3cf; /* Coffee-shop themed color */
+    font-family: 'Roboto', sans-serif;
+    background-color: #f6e3cf;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,7 +15,7 @@ body {
 .circle {
     width: 250px;
     height: 250px;
-    background-color: #d4a373; /* Coffee-shop themed color */
+    background-color: #d4a373;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -35,7 +35,7 @@ body {
 .buttons button {
     margin: 10px;
     padding: 10px 20px;
-    background-color: #d4a373; /* Coffee-shop themed color */
+    background-color: #d4a373;
     border: none;
     border-radius: 5px;
     color: white;
@@ -43,36 +43,64 @@ body {
 }
 
 .buttons button:hover {
-    background-color: #b2845a; /* Darker shade of coffee-shop themed color */
+    background-color: #b2845a;
 }
 
-.guide-content {
-    margin: 50px auto;
-    max-width: 600px;
-    font-family: 'Arial', sans-serif; /* Apply the same font as the rest */
-    color: #6b4d33; /* Cafe brown color for text */
-    text-align: left; /* Align text to the left */
+.break-options {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
 }
 
-.guide-content h1 {
-    font-size: 36px;
-    color: #d4a373; /* Coffee-shop themed color */
+.break-option {
+    margin: 0 10px;
 }
 
-.guide-content p, .guide-content ol {
-    font-size: 18px;
+.break-option input[type="radio"] {
+    display: none;
 }
 
-.guide-content button {
-    margin: 20px;
+.break-option label {
+    display: inline-block;
     padding: 10px 20px;
-    background-color: #d4a373; /* Coffee-shop themed color */
+    background-color: #d4a373;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.break-option label:hover {
+    background-color: #b2845a;
+}
+
+.break-option input[type="radio"]:checked + label {
+    background-color: #b2845a;
+}
+
+#guide-container .guide-content {
+    text-align: left;
+    background-color: #f6e3cf;
+    padding: 20px;
+    border-radius: 5px;
+    color: #5c4033;
+    max-width: 600px;
+    margin: auto;
+}
+
+#guide-container h2, #guide-container p {
+    color: #5c4033;
+}
+
+#back {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #d4a373;
     border: none;
     border-radius: 5px;
     color: white;
     cursor: pointer;
 }
 
-.guide-content button:hover {
-    background-color: #b2845a; /* Darker shade of coffee-shop themed color */
+#back:hover {
+    background-color: #b2845a;
 }
